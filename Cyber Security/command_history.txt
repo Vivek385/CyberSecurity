@@ -1,0 +1,20 @@
+    1  vi skplt.fingerprint.sh
+    2  curl skplt.fingerprint.sh
+    3  curl -s skplt.fingerprint.sh
+    4  sudo bash <(curl -s https://raw.githubusercontent.com/skillplot/lscripts-docker/main/lscripts/banners/skplt.fingerprint.sh)
+    5  sudo apt update
+    6  sudo apt install figlet lolcat
+    7  figlrt "VIVEK_KULKARNI" -c | lolcat 
+    8  figlet "VIVEK_KULKARNI" -c | lolcat 
+    9  figlet "VIVEK" -c | lolcat 
+   10  figlet "VIVEK"
+   11  figlet -f slant -c "VIVEK_KULKARNI" | lolcat
+   12  figlet -f slant -c "2023mt12115" | lolcat && figlet -f digital -c "Vivek Kulkarni" | lolcat
+   13  figlet -f slant -c "2023mt12115" | lolcat && figlet -f digital -c "Vivek Kulkarni" | lolcat
+   14  figlet -c "2023mt12115" | lolcat && figlet -f digital -c "Vivek Kulkarni" | lolcat
+   15  nano ~/.bashrc
+   16  docker-compose build
+   17  docker-compose up
+   18  nano report.html
+   19  command_history.txt
+   20  history > command_history.txt

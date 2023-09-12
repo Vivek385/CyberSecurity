@@ -1,0 +1,89 @@
+<pre><font color="#5FFF5F"> </font><font color="#87FF5F"> </font><font color="#87FF00">         </font><font color="#AFFF00">  ____   _</font><font color="#AFD700">_</font><font color="#D7D700">_ ____  ___</font><font color="#D7AF00">_</font><font color="#FFAF00">_        </font><font color="#FF8700">   _   _ </font><font color="#FF875F">_</font><font color="#FF5F5F">___  _ _ __</font><font color="#FF5F87">_</font><font color="#FF0087">_  </font>
+<font color="#87FF00">        </font><font color="#AFFF00">    |___ \</font><font color="#AFD700"> </font><font color="#D7D700">/ _ \___ \|</font><font color="#D7AF00">_</font><font color="#FFAF00">__ / _ __</font><font color="#FF8700"> ___ | |_</font><font color="#FF875F">/</font><font color="#FF5F5F"> |___ \/ / </font><font color="#FF5F87">|</font><font color="#FF0087"> ___| </font>
+<font color="#87FF00">     </font><font color="#AFFF00">         _</font><font color="#AFD700">_</font><font color="#D7D700">) | | | |__</font><font color="#D7AF00">)</font><font color="#FFAF00"> | |_ \| </font><font color="#FF8700">&apos;_ ` _ \|</font><font color="#FF875F"> </font><font color="#FF5F5F">__| | __) |</font><font color="#FF5F87"> </font><font color="#FF0087">| |___ \ </font>
+<font color="#87FF00">  </font><font color="#AFFF00">          </font><font color="#AFD700"> </font><font color="#D7D700">/ __/| |_| </font><font color="#D7AF00">/</font><font color="#FFAF00"> __/ ___)</font><font color="#FF8700"> | | | | </font><font color="#FF875F">|</font><font color="#FF5F5F"> | |_| |/ _</font><font color="#FF5F87">_</font><font color="#FF0087">/| | |___</font><font color="#FF00AF">) |</font>
+<font color="#AFFF00">         </font><font color="#AFD700"> </font><font color="#D7D700">  |_____|\_</font><font color="#D7AF00">_</font><font color="#FFAF00">_/_____|_</font><font color="#FF8700">___/|_| |</font><font color="#FF875F">_</font><font color="#FF5F5F">| |_|\__|_|</font><font color="#FF5F87">_</font><font color="#FF0087">____|_|_|</font><font color="#FF00AF">____/ </font>
+<font color="#AFFF00">      </font><font color="#AFD700"> </font><font color="#D7D700">           </font><font color="#D7AF00"> </font><font color="#FFAF00">         </font><font color="#FF8700">         </font><font color="#FF875F"> </font><font color="#FF5F5F">           </font><font color="#FF5F87"> </font><font color="#FF0087">         </font><font color="#FF00AF">         </font>
+<font color="#D7D700">    </font><font color="#D7AF00"> </font><font color="#FFAF00">         </font><font color="#FF8700">         </font><font color="#FF875F"> </font><font color="#FF5F5F"> +-+-+-+-+-</font><font color="#FF5F87">+</font><font color="#FF0087"> +-+-+-+-</font><font color="#FF00AF">+-+-+-+-+</font>
+<font color="#D7D700"> </font><font color="#D7AF00"> </font><font color="#FFAF00">         </font><font color="#FF8700">         </font><font color="#FF875F"> </font><font color="#FF5F5F">    |V|i|v|</font><font color="#FF5F87">e</font><font color="#FF0087">|k| |K|u|</font><font color="#FF00AF">l|k|a|r|n</font><font color="#D700AF">|i</font><font color="#D700D7">|</font>
+<font color="#FFAF00">        </font><font color="#FF8700">         </font><font color="#FF875F"> </font><font color="#FF5F5F">       +-+-</font><font color="#FF5F87">+</font><font color="#FF0087">-+-+-+ +-</font><font color="#FF00AF">+-+-+-+-+</font><font color="#D700AF">-+</font><font color="#D700D7">-+-+</font>
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ vi sniffer.c
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ ifconfig
+br-6438effbf2d7: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.9.0.1  netmask 255.255.255.0  broadcast 10.9.0.255
+        inet6 fe80::42:f5ff:fe4b:2329  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 02:42:f5:4b:23:29  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 33  bytes 4450 (4.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:d4:56:3f:79  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s3: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.0.2.4  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::5fb6:874b:acd2:768c  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 08:00:27:0e:cd:fe  txqueuelen 1000  (Ethernet)
+        RX packets 4051  bytes 4161851 (4.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2944  bytes 422507 (422.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 457  bytes 42834 (42.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 457  bytes 42834 (42.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth499c73f: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet6 fe80::4c13:5ff:fe59:ccec  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 4e:13:05:59:cc:ec  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 64  bytes 7935 (7.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth8c98444: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet6 fe80::78bd:1bff:fe40:67bd  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 7a:bd:1b:40:67:bd  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 66  bytes 8115 (8.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=59 time=10.2 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=59 time=22.8 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=59 time=23.4 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=59 time=21.5 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=59 time=9.85 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=59 time=13.1 ms
+^C
+--- 8.8.8.8 ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5025ms
+rtt min/avg/max/mdev = 9.846/16.808/23.369/5.870 ms
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ vi sniffer.c
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ gcc sniffer.c -lpcap
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ docker cp a.out e6441e54c7f2:/tmp
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=59 time=9.69 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=59 time=19.2 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=59 time=42.6 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=59 time=13.5 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=59 time=31.5 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=59 time=10.4 ms
+^C
+--- 8.8.8.8 ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5020ms
+rtt min/avg/max/mdev = 9.689/21.162/42.624/12.090 ms</pre>

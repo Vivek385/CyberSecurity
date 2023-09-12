@@ -1,0 +1,81 @@
+<pre><font color="#00FF87">   </font><font color="#5FFF87"> </font><font color="#5FFF5F">         __</font><font color="#87FF5F">_</font><font color="#87FF00">_   ___ _</font><font color="#AFFF00">___  _____</font><font color="#AFD700"> </font><font color="#D7D700">          _</font><font color="#D7AF00"> </font><font color="#FFAF00">  _ ____ </font><font color="#FF8700"> _ _ ____</font><font color="#FF875F"> </font><font color="#FF5F5F"> </font>
+<font color="#5FFF87"> </font><font color="#5FFF5F">           </font><font color="#87FF5F">|</font><font color="#87FF00">___ \ / _</font><font color="#AFFF00"> \___ \|__</font><font color="#AFD700">_</font><font color="#D7D700"> / _ __ ___</font><font color="#D7AF00"> </font><font color="#FFAF00">| |_/ |__</font><font color="#FF8700">_ \/ / | </font><font color="#FF875F">_</font><font color="#FF5F5F">__| </font>
+<font color="#5FFF5F">         </font><font color="#87FF5F"> </font><font color="#87FF00">    __) |</font><font color="#AFFF00"> | | |__) </font><font color="#AFD700">|</font><font color="#D7D700"> |_ \| &apos;_ `</font><font color="#D7AF00"> </font><font color="#FFAF00">_ \| __| </font><font color="#FF8700">| __) | |</font><font color="#FF875F"> </font><font color="#FF5F5F">|___ \ </font>
+<font color="#5FFF5F">      </font><font color="#87FF5F"> </font><font color="#87FF00">      / _</font><font color="#AFFF00">_/| |_| / </font><font color="#AFD700">_</font><font color="#D7D700">_/ ___) | |</font><font color="#D7AF00"> </font><font color="#FFAF00">| | | | |</font><font color="#FF8700">_| |/ __/</font><font color="#FF875F">|</font><font color="#FF5F5F"> | |___) |</font>
+<font color="#5FFF5F">   </font><font color="#87FF5F"> </font><font color="#87FF00">        |</font><font color="#AFFF00">_____|\___</font><font color="#AFD700">/</font><font color="#D7D700">_____|____/</font><font color="#D7AF00">|</font><font color="#FFAF00">_| |_| |_</font><font color="#FF8700">|\__|_|__</font><font color="#FF875F">_</font><font color="#FF5F5F">__|_|_|____</font><font color="#FF5F87">/</font><font color="#FF0087"> </font>
+<font color="#87FF5F"> </font><font color="#87FF00">         </font><font color="#AFFF00">          </font><font color="#AFD700"> </font><font color="#D7D700">           </font><font color="#D7AF00"> </font><font color="#FFAF00">         </font><font color="#FF8700">         </font><font color="#FF875F"> </font><font color="#FF5F5F">           </font><font color="#FF5F87"> </font><font color="#FF0087">    </font>
+<font color="#8700FF">        </font><font color="#875FFF"> </font><font color="#5F5FFF">           </font><font color="#5F87FF"> </font><font color="#0087FF">    +-+-+</font><font color="#00AFFF">-+-+-+ +-</font><font color="#00AFD7">+-</font><font color="#00D7D7">+-+-+-+-+-</font><font color="#00D7AF">+</font><font color="#00FFAF">-+</font>
+<font color="#8700FF">     </font><font color="#875FFF"> </font><font color="#5F5FFF">           </font><font color="#5F87FF"> </font><font color="#0087FF">       |V</font><font color="#00AFFF">|i|v|e|k|</font><font color="#00AFD7"> |</font><font color="#00D7D7">K|u|l|k|a|</font><font color="#00D7AF">r</font><font color="#00FFAF">|n|i|</font>
+<font color="#8700FF">  </font><font color="#875FFF"> </font><font color="#5F5FFF">           </font><font color="#5F87FF"> </font><font color="#0087FF">         </font><font color="#00AFFF"> +-+-+-+-</font><font color="#00AFD7">+-</font><font color="#00D7D7">+ +-+-+-+-</font><font color="#00D7AF">+</font><font color="#00FFAF">-+-+-+-+</font>
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ sudo python3
+Python 3.8.10 (default, May 26 2023, 14:05:08) 
+[GCC 9.4.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; from scapy.all import *
+&gt;&gt;&gt; a = IP()
+&gt;&gt;&gt; a.dst = &apos;10.0.2.3&apos;
+&gt;&gt;&gt; b = ICMP()
+&gt;&gt;&gt; p = a/b
+&gt;&gt;&gt; send(p)
+.
+Sent 1 packets.
+&gt;&gt;&gt; ls(a)
+version    : BitField  (4 bits)                  = 4               (4)
+ihl        : BitField  (4 bits)                  = None            (None)
+tos        : XByteField                          = 0               (0)
+len        : ShortField                          = None            (None)
+id         : ShortField                          = 1               (1)
+flags      : FlagsField  (3 bits)                = &lt;Flag 0 ()&gt;     (&lt;Flag 0 ()&gt;)
+frag       : BitField  (13 bits)                 = 0               (0)
+ttl        : ByteField                           = 64              (64)
+proto      : ByteEnumField                       = 0               (0)
+chksum     : XShortField                         = None            (None)
+src        : SourceIPField                       = &apos;10.0.2.4&apos;      (None)
+dst        : DestIPField                         = &apos;10.0.2.3&apos;      (None)
+options    : PacketListField                     = []              ([])
+&gt;&gt;&gt; a = &apos;1.2.3.4&apos;
+&gt;&gt;&gt; a.ttl = 3
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+AttributeError: &apos;str&apos; object has no attribute &apos;ttl&apos;
+&gt;&gt;&gt; a.dst = &apos;1.2.3.4&apos;
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+AttributeError: &apos;str&apos; object has no attribute &apos;dst&apos;
+&gt;&gt;&gt; a = IP()
+&gt;&gt;&gt; a.dst = &apos;1.2.3.4&apos;
+&gt;&gt;&gt; a.ttl = 3
+&gt;&gt;&gt; b = ICMP()
+&gt;&gt;&gt; send(a/b)
+.
+Sent 1 packets.
+&gt;&gt;&gt; ls(a)
+version    : BitField  (4 bits)                  = 4               (4)
+ihl        : BitField  (4 bits)                  = None            (None)
+tos        : XByteField                          = 0               (0)
+len        : ShortField                          = None            (None)
+id         : ShortField                          = 1               (1)
+flags      : FlagsField  (3 bits)                = &lt;Flag 0 ()&gt;     (&lt;Flag 0 ()&gt;)
+frag       : BitField  (13 bits)                 = 0               (0)
+ttl        : ByteField                           = 3               (64)
+proto      : ByteEnumField                       = 0               (0)
+chksum     : XShortField                         = None            (None)
+src        : SourceIPField                       = &apos;10.0.2.4&apos;      (None)
+dst        : DestIPField                         = &apos;1.2.3.4&apos;       (None)
+options    : PacketListField                     = []              ([])
+&gt;&gt;&gt; ping 1.2.3.4
+  File &quot;&lt;stdin&gt;&quot;, line 1
+    ping 1.2.3.4
+         ^
+SyntaxError: invalid syntax
+&gt;&gt;&gt; exit()
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ ping 1.2.3.4
+PING 1.2.3.4 (1.2.3.4) 56(84) bytes of data.
+^C
+--- 1.2.3.4 ping statistics ---
+9 packets transmitted, 0 received, 100% packet loss, time 8181ms
+
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ ip route get 1.2.3.4
+1.2.3.4 via 10.0.2.1 dev enp0s3 src 10.0.2.4 uid 1000 
+    cache 
+</pre>

@@ -1,0 +1,472 @@
+<pre><font color="#FF0087">   </font><font color="#FF00AF">         </font><font color="#D700AF"> </font><font color="#D700D7">____   ___ </font><font color="#AF00D7">_</font><font color="#AF00FF">___  ____</font><font color="#8700FF">_         </font><font color="#5F5FFF">  _   _ ____</font><font color="#0087FF">  _ _ ____</font><font color="#00AFFF">  </font>
+<font color="#FF00AF">         </font><font color="#D700AF"> </font><font color="#D700D7">  |___ \ / </font><font color="#AF00D7">_</font><font color="#AF00FF"> \___ \|_</font><font color="#8700FF">__ / _ __ </font><font color="#5F5FFF">___ | |_/ |_</font><font color="#0087FF">__ \/ / | </font><font color="#00AFFF">___| </font>
+<font color="#FF00AF">      </font><font color="#D700AF"> </font><font color="#D700D7">       __) </font><font color="#AF00D7">|</font><font color="#AF00FF"> | | |__)</font><font color="#8700FF"> | |_ \| &apos;</font><font color="#5F5FFF">_ ` _ \| __|</font><font color="#0087FF"> | __) | |</font><font color="#00AFFF"> |___ \ </font>
+<font color="#FF00AF">   </font><font color="#D700AF"> </font><font color="#D700D7">         / </font><font color="#AF00D7">_</font><font color="#AF00FF">_/| |_| /</font><font color="#8700FF"> __/ ___) </font><font color="#5F5FFF">| | | | | | </font><font color="#0087FF">|_| |/ __/</font><font color="#00AFFF">| | |___)</font><font color="#00AFD7"> </font><font color="#00D7D7">|</font>
+<font color="#D700AF"> </font><font color="#D700D7">           </font><font color="#AF00D7">|</font><font color="#AF00FF">_____|\__</font><font color="#8700FF">_/_____|__</font><font color="#5F5FFF">__/|_| |_| |</font><font color="#0087FF">_|\__|_|__</font><font color="#00AFFF">___|_|_|_</font><font color="#00AFD7">_</font><font color="#00D7D7">__/ </font>
+<font color="#D700D7">         </font><font color="#AF00D7"> </font><font color="#AF00FF">         </font><font color="#8700FF">          </font><font color="#5F5FFF">            </font><font color="#0087FF">          </font><font color="#00AFFF">         </font><font color="#00AFD7"> </font><font color="#00D7D7">       </font>
+<font color="#87FF00"> </font><font color="#AFFF00">          </font><font color="#AFD700"> </font><font color="#D7D700">           </font><font color="#D7AF00"> </font><font color="#FFAF00"> +-+-+-+-</font><font color="#FF8700">+-+ +-+-+</font><font color="#FF875F">-</font><font color="#FF5F5F">+-+-+-+-+-+</font>
+<font color="#AFFF00">        </font><font color="#AFD700"> </font><font color="#D7D700">           </font><font color="#D7AF00"> </font><font color="#FFAF00">    |V|i|</font><font color="#FF8700">v|e|k| |K</font><font color="#FF875F">|</font><font color="#FF5F5F">u|l|k|a|r|n</font><font color="#FF5F87">|</font><font color="#FF0087">i|</font>
+<font color="#AFFF00">     </font><font color="#AFD700"> </font><font color="#D7D700">           </font><font color="#D7AF00"> </font><font color="#FFAF00">       +-</font><font color="#FF8700">+-+-+-+-+</font><font color="#FF875F"> </font><font color="#FF5F5F">+-+-+-+-+-+</font><font color="#FF5F87">-</font><font color="#FF0087">+-+-+</font>
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ view sniffer.py
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ dockps
+e6441e54c7f2  seed-attacker
+250c3f1966b5  hostA-10.9.0.5
+d0318ad0559a  hostB-10.9.0.6
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ ifconfig
+br-6438effbf2d7: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.9.0.1  netmask 255.255.255.0  broadcast 10.9.0.255
+        inet6 fe80::42:84ff:fe6b:c4e3  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 02:42:84:6b:c4:e3  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 40  bytes 5118 (5.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+docker0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:d8:16:e3:a2  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s3: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 10.0.2.4  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::5fb6:874b:acd2:768c  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 08:00:27:0e:cd:fe  txqueuelen 1000  (Ethernet)
+        RX packets 551307  bytes 827117954 (827.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 146468  bytes 8874284 (8.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 320  bytes 29952 (29.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 320  bytes 29952 (29.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth02c8795: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet6 fe80::3cad:3dff:fe8b:3ea2  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 3e:ad:3d:8b:3e:a2  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 58  bytes 7339 (7.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth8d5c29c: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet6 fe80::e495:8aff:fe98:9a26  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether e6:95:8a:98:9a:26  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 59  bytes 7452 (7.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ docker network ls
+NETWORK ID     NAME           DRIVER    SCOPE
+0be736de5c2a   bridge         bridge    local
+b3581338a28d   host           host      local
+6438effbf2d7   net-10.9.0.0   bridge    local
+77acecccbe26   none           null      local
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ view sniffer.py
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ chmod a+x sniffer.py
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ sniffer.py
+from: can&apos;t read /var/mail/scapy.all
+./sniffer.py: line 3: syntax error near unexpected token `(&apos;
+./sniffer.py: line 3: `def print_pkt(pkt):&apos;
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ vi sniffer.py 
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ python3 sniffer.py
+Traceback (most recent call last):
+  File &quot;sniffer.py&quot;, line 6, in &lt;module&gt;
+    pkt = sniff(iface = &apos;br-6438effbf2d7&apos;, filter=&apos;icmp&apos;, prn=print_pkt)
+  File &quot;/usr/local/lib/python3.8/dist-packages/scapy/sendrecv.py&quot;, line 1036, in sniff
+    sniffer._run(*args, **kwargs)
+  File &quot;/usr/local/lib/python3.8/dist-packages/scapy/sendrecv.py&quot;, line 906, in _run
+    sniff_sockets[L2socket(type=ETH_P_ALL, iface=iface,
+  File &quot;/usr/local/lib/python3.8/dist-packages/scapy/arch/linux.py&quot;, line 398, in __init__
+    self.ins = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(type))  # noqa: E501
+  File &quot;/usr/lib/python3.8/socket.py&quot;, line 231, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
+[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ sudo python3 sniffer.py
+^C[09/12/23]<font color="#4E9A06"><b>seed@VM</b></font>:<font color="#3465A4"><b>~/.../Sniffing_Spoofing</b></font>$ sudo python3 sniffer.py
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 7311
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x3fd
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x3603
+        id        = 0x3
+        seq       = 0x1
+###[ Raw ]### 
+           load      = &apos;\xada\x00e\x00\x00\x00\x00P_\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27037
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcc0
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0x3e03
+        id        = 0x3
+        seq       = 0x1
+###[ Raw ]### 
+           load      = &apos;\xada\x00e\x00\x00\x00\x00P_\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 7398
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x3a6
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x9efe
+        id        = 0x3
+        seq       = 0x2
+###[ Raw ]### 
+           load      = &apos;\xaea\x00e\x00\x00\x00\x00\xe6b\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27038
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcbf
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0xa6fe
+        id        = 0x3
+        seq       = 0x2
+###[ Raw ]### 
+           load      = &apos;\xaea\x00e\x00\x00\x00\x00\xe6b\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 7643
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x2b1
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x5cf6
+        id        = 0x3
+        seq       = 0x3
+###[ Raw ]### 
+           load      = &apos;\xafa\x00e\x00\x00\x00\x00\&apos;j\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27039
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcbe
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0x64f6
+        id        = 0x3
+        seq       = 0x3
+###[ Raw ]### 
+           load      = &apos;\xafa\x00e\x00\x00\x00\x00\&apos;j\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 7860
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x1d8
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x4f1
+        id        = 0x3
+        seq       = 0x4
+###[ Raw ]### 
+           load      = &apos;\xb0a\x00e\x00\x00\x00\x00~n\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27040
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcbd
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0xcf1
+        id        = 0x3
+        seq       = 0x4
+###[ Raw ]### 
+           load      = &apos;\xb0a\x00e\x00\x00\x00\x00~n\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 7950
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x17e
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x6be7
+        id        = 0x3
+        seq       = 0x5
+###[ Raw ]### 
+           load      = &apos;\xb1a\x00e\x00\x00\x00\x00\x16w\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27041
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcbc
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0x73e7
+        id        = 0x3
+        seq       = 0x5
+###[ Raw ]### 
+           load      = &apos;\xb1a\x00e\x00\x00\x00\x00\x16w\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 8002
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0x14a
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x2e1
+        id        = 0x3
+        seq       = 0x6
+###[ Raw ]### 
+           load      = &apos;\xb2a\x00e\x00\x00\x00\x00~|\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27042
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcbb
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0xae1
+        id        = 0x3
+        seq       = 0x6
+###[ Raw ]### 
+           load      = &apos;\xb2a\x00e\x00\x00\x00\x00~|\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:84:6b:c4:e3
+  src       = 02:42:0a:09:00:05
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x0
+     len       = 84
+     id        = 8093
+     flags     = DF
+     frag      = 0
+     ttl       = 64
+     proto     = icmp
+     chksum    = 0xef
+     src       = 10.9.0.5
+     dst       = 8.8.8.8
+     \options   \
+###[ ICMP ]### 
+        type      = echo-request
+        code      = 0
+        chksum    = 0x16dc
+        id        = 0x3
+        seq       = 0x7
+###[ Raw ]### 
+           load      = &apos;\xb3a\x00e\x00\x00\x00\x00i\x80\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+
+###[ Ethernet ]### 
+  dst       = 02:42:0a:09:00:05
+  src       = 02:42:84:6b:c4:e3
+  type      = IPv4
+###[ IP ]### 
+     version   = 4
+     ihl       = 5
+     tos       = 0x2e
+     len       = 84
+     id        = 27043
+     flags     = 
+     frag      = 0
+     ttl       = 58
+     proto     = icmp
+     chksum    = 0xfcba
+     src       = 8.8.8.8
+     dst       = 10.9.0.5
+     \options   \
+###[ ICMP ]### 
+        type      = echo-reply
+        code      = 0
+        chksum    = 0x1edc
+        id        = 0x3
+        seq       = 0x7
+###[ Raw ]### 
+           load      = &apos;\xb3a\x00e\x00\x00\x00\x00i\x80\x05\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !&quot;#$%&amp;\&apos;()*+,-./01234567&apos;
+</pre>
